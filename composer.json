@@ -1,0 +1,23 @@
+{
+    "name": "tofarias/datamining",
+    "description": "Importar arquivos de texto, ler e analisar os dados dos arquivos, gerar um relatório.",
+    "license": "MIT",
+    "keywords": ["datamining"],
+    "authors": [
+        {
+            "name": "Tiago O. de Farias",
+            "email": "tiago.farias.poa@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "TiagoFarias\\DataMining\\": "src"
+        }
+    }
+}
