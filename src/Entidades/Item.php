@@ -3,7 +3,7 @@
 /**
  * @author Tiago O. de Farias <tiago.farias.poa@gmail.com>
  */
-class Item
+class Item implements IEntidade
 {
     const ITEM_ID        = 'item_id';
     const ITEM_QUANTITY  = 'item_quantity';

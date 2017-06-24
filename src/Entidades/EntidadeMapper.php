@@ -6,7 +6,7 @@ use TiagoFarias\DataMining\Entidades\TraitEntidade;
  * Responsável por montar um array identificando a entidade
  * @author Tiago O. de Farias <tiago.farias.poa@gmail.com>
  */
-class EntidadeMapper
+class EntidadeMapper implements IEntidadeMapper
 {
     use TraitEntidade;
 

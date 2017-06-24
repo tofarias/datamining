@@ -3,7 +3,7 @@
 /**
  * @author Tiago O. de Farias <tiago.farias.poa@gmail.com>
  */
-class Salesman
+class Salesman implements IEntidade
 {
     use TraitSanitize;
 

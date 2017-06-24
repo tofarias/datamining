@@ -3,7 +3,7 @@
 use TiagoFarias\DataMining\Entidades\EntidadeMapper;
 
 /**
- * Undocumented class
+ * Lê e processa dados dos arquivos
  * @author Tiago O. de Farias <tiago.farias.poa@gmail.com>
  */
 class ImportaVendas implements IImportaVendas

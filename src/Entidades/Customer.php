@@ -3,7 +3,7 @@
 /**
  * @author Tiago O. de Farias <tiago.farias.poa@gmail.com>
  */
-class Customer
+class Customer implements IEntidade
 {
     const ID            = 'id';
     const CNPJ          = 'cnpj';

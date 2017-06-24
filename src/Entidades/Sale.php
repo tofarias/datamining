@@ -3,7 +3,7 @@
 /**
  * @author Tiago O. de Farias <tiago.farias.poa@gmail.com>
  */
-class Sale
+class Sale implements IEntidade
 {
     const ID            = 'ID';
     const SALE_ID       = 'sale_id';
