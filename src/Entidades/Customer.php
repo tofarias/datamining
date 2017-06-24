@@ -1,8 +1,11 @@
 <?php namespace TiagoFarias\DataMining\Entidades;
 
+/**
+ * @author Tiago O. de Farias <tiago.farias.poa@gmail.com>
+ */
 class Customer
 {
-    const ID            = 'ID';
+    const ID            = 'id';
     const CNPJ          = 'cnpj';
     const NAME          = 'name';
     const BUSINES_AREA  = 'business_area';
@@ -14,24 +17,7 @@ class Customer
 
     const IDENTIFICADOR = '002';
 
-    private $data;
-
-    public function __construct()
-    {
-        $this->data = Array();
-    }
-
-    public function findAll(Array $data) : Array
-    {
-        foreach ($data as $key => $value){
-            $data = $this->mapper( $value );
-
-            if( !empty($data) ){
-                $this->data[] = $data;
-            }
-        }
-        return $this->data;
-    }
+    public function __construct(){ }
 
     public function mapper( Array $value ) : Array
     {
@@ -41,10 +27,5 @@ class Customer
                 self::NAME          => $value[self::NAME_INDEX],
                 self::BUSINES_AREA  => $value[self::BUSINES_AREA_INDEX],
             ];
-    }
-
-    protected function isCustomer( $value )
-    {
-        return self::IDENTIFICADOR == $value;
     }
 }

@@ -2,6 +2,10 @@
 
 use TiagoFarias\DataMining\Entidades\TraitEntidade;
 
+/**
+ * Responsável por montar um array identificando a entidade
+ * @author Tiago O. de Farias <tiago.farias.poa@gmail.com>
+ */
 class EntidadeMapper
 {
     use TraitEntidade;
@@ -10,9 +14,8 @@ class EntidadeMapper
 
     public function __construct(){ }
 
-    public function getEntidade(Array $dados)
+    public function getEntidade(Array $dados) : Array
     {
-        $entidade = null;
         $identificador = $dados[0];
         
         if( $this->isSalesman($identificador) ){
@@ -27,8 +30,6 @@ class EntidadeMapper
             $sale = new Sale;
             $entidade['SALE'] = $sale->mapper( $dados );
         }
-
-        
         
         return $entidade;
     }

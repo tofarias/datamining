@@ -1,5 +1,9 @@
 <?php namespace TiagoFarias\DataMining\Entidades;
 
+/**
+ * Responsável por identificar os tipos de entidades no arquivo
+ * @author Tiago O. de Farias <tiago.farias.poa@gmail.com>
+ */
 trait TraitEntidade
 {
     private function isSalesman( $identificador )

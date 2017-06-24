@@ -1,5 +1,9 @@
 <?php namespace TiagoFarias\DataMining;
 
+/**
+ * Prepara os dados processados para escrever no arquivo
+ * @author Tiago O. de Farias <tiago.farias.poa@gmail.com>
+ */
 class Relatorio
 {
     private $arquivo;
