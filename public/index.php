@@ -2,10 +2,15 @@
 
 include __DIR__.'/../bootstrap.php';
 
-use TiagoFarias\DataMining\{FOpen,Relatorio};
-use TiagoFarias\DataMining\Entidades\{Salesman, Customer, Sale, Fabrica, EntidadeMapper};
+use TiagoFarias\DataMining\RoboImportaArquivos;
 
+try{
+    
+    $robo = new RoboImportaArquivos;
+    $robo->executar();
 
+    echo '['.date('d/m/Y H:i:s').'] Robô executado com sucesso!';
 
-$arquivoIn = new FOpen('in.dat');
-$relatorio = new Relatorio($arquivoIn);
+}catch(\Exception $ex){
+    echo $ex->getMessage();
+}
