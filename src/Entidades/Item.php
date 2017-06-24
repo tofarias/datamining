@@ -5,6 +5,8 @@
  */
 class Item implements IEntidade
 {
+    use TraitSanitize;
+
     const ITEM_ID        = 'item_id';
     const ITEM_QUANTITY  = 'item_quantity';
     const ITEM_PRICE     = 'item_price';
@@ -33,14 +35,9 @@ class Item implements IEntidade
             $itemDaVendaExplode = explode('-',$itemDaVenda);
             
             $itens[$key][self::ITEM_ID]         = $itemDaVendaExplode[0];
-            $itens[$key][self::ITEM_QUANTITY]   = filter_var($itemDaVendaExplode[1], FILTER_SANITIZE_NUMBER_INT);
-            $itens[$key][self::ITEM_PRICE]      = filter_var($itemDaVendaExplode[2], FILTER_SANITIZE_NUMBER_FLOAT,FILTER_FLAG_ALLOW_FRACTION);
+            $itens[$key][self::ITEM_QUANTITY]   = $this->sanitizeNumberInt($itemDaVendaExplode[1]);
+            $itens[$key][self::ITEM_PRICE]      = $this->sanitizeNumberFloat($itemDaVendaExplode[2]);
         }
         return $itens;
-    }
-
-    protected function isSale( $id )
-    {
-        return self::IDENTIFICADOR == $id;
     }
 }
