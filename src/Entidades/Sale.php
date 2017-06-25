@@ -18,14 +18,17 @@ class Sale implements IEntidade
 
     public function mapper( Array $value ) : Array
     {
-        $item = new Item;
-        $itemMapper = $item->mapper( $value );
+        $itemMapper = function( $value ){
+            $item = new Item;
+            return $item->mapper( $value );
+        };
+        
         
         return [
             self::ID            => $value[self::ID_INDEX],
             self::SALE_ID       => $value[self::SALE_ID_INDEX],
             self::SALESMAN_ID   => end($value),
-            'ITEM'              => $itemMapper
+            'ITEM'              => $itemMapper($value)
         ];
     }
 }
