@@ -1,4 +1,4 @@
-Sistema em PHP para análise de dados, onde o mesmo deverá permitir:
+Sistema em PHP para análise de dados, onde o mesmo permite:
 → importar arquivos de texto;
 → ler e analisar os dados dos arquivos;
 → gerar um relatório.
